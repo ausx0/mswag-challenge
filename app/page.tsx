@@ -118,7 +118,7 @@ const Home = () => {
                       </span>
                       <span>
                         <ReactStars
-                          value={data.rating}
+                          value={parseFloat(data.rating)} // Convert the string to a number
                           activeColors={[
                             "red",
                             "orange",
