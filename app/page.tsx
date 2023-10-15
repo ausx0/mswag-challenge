@@ -101,7 +101,7 @@ const Home = () => {
                   className="flex flex-col justify-center items-center p-10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] "
                 >
                   <Image src={data.image} width={200} height={250} alt="" />
-                  <div>
+                  <div className="flex flex-col pt-3 gap-3">
                     {selectedLanguage === "EN" ? (
                       <p className="block truncate w-[15rem] text-[20px] font-medium ">
                         {data.title.EN}
