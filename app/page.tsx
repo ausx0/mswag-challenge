@@ -78,7 +78,7 @@ const Home = () => {
           </DropdownMenu>
         </div>
         <Tabs defaultValue={activeTab}>
-          <TabsList className="flex justify-center items-center gap-8 w-auto">
+          <TabsList className="flex justify-center flex-wrap items-center gap-8 w-auto">
             {Object.keys(groupedProducts).map((category) => (
               <TabsTrigger
                 key={category}
@@ -91,14 +91,14 @@ const Home = () => {
             ))}
           </TabsList>
 
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap gap-10 mt-10">
             {dataset
               .filter((data) => data.category === activeTab)
               .map((data, index) => (
                 <TabsContent
                   key={data.id}
                   value={data.category}
-                  className="flex flex-col justify-center items-center p-10 "
+                  className="flex flex-col justify-center items-center p-10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] "
                 >
                   <Image src={data.image} width={200} height={250} alt="" />
                   <div>
@@ -140,11 +140,16 @@ const Home = () => {
                             </span>
                           </>
                         )}
-                      <div className="flex justify-between gap-3 ">
+                      <div className="flex justify-between gap-5 ">
                         <span className="font-medium text-[24px]">
                           {formatAmountWithCurrency(data.price.value)}
                         </span>
-                        <AvatarGroup size="sm" max={3} color="default">
+                        <AvatarGroup
+                          size="sm"
+                          max={3}
+                          isBordered
+                          color="default"
+                        >
                           {data.colors.map((color, index) => (
                             <React.Fragment key={index}>
                               <Avatar
@@ -153,6 +158,7 @@ const Home = () => {
                                   backgroundColor: color,
                                 }}
                                 size="sm"
+                                color="default"
                                 classNames={{
                                   icon: "text-black/0",
                                 }}
