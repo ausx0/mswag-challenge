@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${volkhov.variable}  ${poppins.variable} `}>
-        <section className="m-12">
+        <section className="m-12 h-[130vh]">
           <Providers>{children}</Providers>
         </section>
       </body>
