@@ -1,11 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-  images: {
-    // Enable the optimization flag to allow image optimization.
-    optimize: true,
-  },
-};
+const nextConfig = {};
 
 module.exports = {
   images: {
