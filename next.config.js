@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  target: "experimental-serverless-trace",
-};
-
-module.exports = {
+  output: "export",
   images: {
     domains: ["cdn.miswag.me"], // Add any other domains you need to allow
   },
 };
+
+module.exports = nextConfig;
