@@ -117,7 +117,6 @@ const Home = () => {
                         {data.brand}
                       </span>
                       <span>
-                        {" "}
                         <ReactStars
                           value={data.rating}
                           activeColors={[
