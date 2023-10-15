@@ -77,7 +77,7 @@ const Home = () => {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        <Tabs defaultValue="smartphones">
+        <Tabs defaultValue={activeTab}>
           <TabsList className="flex justify-center items-center gap-8 w-auto">
             {Object.keys(groupedProducts).map((category) => (
               <TabsTrigger
